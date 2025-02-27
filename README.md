@@ -1,5 +1,6 @@
 1) Выберите из таблицы orders все заказы
-2) ![image](https://github.com/user-attachments/assets/dddde632-c6e6-436d-a693-2648e1092f87)
+![1000006962](https://github.com/user-attachments/assets/ee97ffa4-752d-4276-90d1-187d819d9566)
+
 SELECT * FROM orders
 3) Выберите из таблицы orders все заказы кроме новых. У новых заказов status равен "new". Использовать in
 SELECT * FROM orders
