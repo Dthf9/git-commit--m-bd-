@@ -35,7 +35,9 @@ value (7, 'VR-очки', 2, 70000);
 9)В таблицу products внесли данные с ошибкой, вместо "PS5" в наименовании написали IMAC. Исправьте ошибку.
 update products set name='PS5' where id=7;
 ![image](https://github.com/user-attachments/assets/803bd8dc-4f5f-4d28-8052-94fffe4961cd)
-8)create table users (
+8)Создайте таблицу users с полем id типа INT и двумя текстовыми полями, которые будут хранить имя (first_name) и фамилию (last_name). Длина имени и фамилии не превышает 50 символов.
+Добавьте в таблицу трех пользователей: Дмитрия Иванова, Анатолия Белого и Дениса Давыдова.
+create table users (
    id INT, 
 	first_name VARCHAR(50), 
 	last_name VARCHAR(50))vmusers;
