@@ -35,3 +35,13 @@ value (7, 'VR-очки', 2, 70000);
 9)В таблицу products внесли данные с ошибкой, вместо "PS5" в наименовании написали IMAC. Исправьте ошибку.
 update products set name='PS5' where id=7;
 ![image](https://github.com/user-attachments/assets/803bd8dc-4f5f-4d28-8052-94fffe4961cd)
+8)create table users (
+   id INT, 
+	first_name VARCHAR(50), 
+	last_name VARCHAR(50))vmusers;
+INSERT INTO users (id, first_name, last_name)
+VALUES 
+   (1, 'Дмитрий', 'Иванов'),
+   (2, 'Анатолий', 'Белов'),
+   (1, 'Денис', 'Давыдов');
+   ![image](https://github.com/user-attachments/assets/56db7a5a-e70b-4f5a-a8ba-50a85635ecb7)
