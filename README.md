@@ -42,7 +42,16 @@ create table users (
 	first_name VARCHAR(50), 
 	last_name VARCHAR(50))vmusers;
 INSERT INTO users (id, first_name, last_name)
-VALUES 
+VALUES
+9)Создайте таблицу users для хранения информации о пользователях сайта.
+В таблице должны быть следующие поля:
+
+id – идентификатор, целое положительное;
+email – адрес электронной почты, строка не более 100 символов;
+date_joined – дата регистрации (достаточно хранить дату, без времени)
+last_activity – дата и время последней активности (с точностью до секунд).
+![image](https://github.com/user-attachments/assets/8416b71a-d28e-4595-996d-c6bd3c8a3bed)
+
    (1, 'Дмитрий', 'Иванов'),
    (2, 'Анатолий', 'Белов'),
    (1, 'Денис', 'Давыдов');
