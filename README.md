@@ -50,9 +50,54 @@ id – идентификатор, целое положительное;
 email – адрес электронной почты, строка не более 100 символов;
 date_joined – дата регистрации (достаточно хранить дату, без времени)
 last_activity – дата и время последней активности (с точностью до секунд).
+Create table calendar (
+id int unsigned,
+user_id int unsigned,
+doctor_id int unsigned,
+visit_date datetime);
+Insert into calendar (id, user_id, doctor_id, visit_date)
+Values 
+(1, 1914 , 1, '2017-04-08 12:00:00'),
+(2, 12, 1, '2017-04-08 12:30:00'),
+(3, 4641, 2, '2017-04-09 09:00:00'),
+(4, 784, 1,'2017-04-08 13:00:00'),
+(5, 15, 2,'2017-04-09 10:00:00')
 ![image](https://github.com/user-attachments/assets/8416b71a-d28e-4595-996d-c6bd3c8a3bed)
+10)Создайте таблицу calendar для хранения календаря посетителей.
+В таблице должны быть следующие поля:
 
-   (1, 'Дмитрий', 'Иванов'),
-   (2, 'Анатолий', 'Белов'),
-   (1, 'Денис', 'Давыдов');
-   ![image](https://github.com/user-attachments/assets/56db7a5a-e70b-4f5a-a8ba-50a85635ecb7)
+id – идентификатор записи в календаре, целое положительное;
+user_id – идентификатор пользователя, целое положительное;
+doctor_id – идентификатор доктора, целое положительное;
+visit_date – дата и время визита (точность до секунд).
+create table users (
+id int(10) unsigned,
+email varchar (100),
+date_joined date,
+last_activity datetime
+);
+insert into users (id, email, date_joined,last_activity)
+values
+(1,'user1@domain.com', '2014-12-12','2016-04-08 12:34:54'),
+(2,'user2@domain.com', '2014-12-12','2017-02-13 11:46:53'),
+(3,'user3@domain.com', '2014-12-13','2017-04-04 05:12:07');
+![image](https://github.com/user-attachments/assets/cce5adf0-7801-4463-ad7e-cf28195dcaa3)
+![image](https://github.com/user-attachments/assets/56db7a5a-e70b-4f5a-a8ba-50a85635ecb7)
+11)Создайте таблицу users , в которой будут следующие поля:
+
+id — идентификатор, целые положительные числа.
+first_name— имя, строки до 50 символов.
+last_name — фамилия, строки до 60 символов.
+bio — биография, текст до 65000 символов.
+create table users (
+id int (10) unsigned,
+first_name varchar (50),
+last_name varchar (60),
+bio text
+);
+INSERT INTO users (id, first_name, last_name, bio)
+VALUES
+(1,'Антон','Кулик','С отличием окончил 39 лицей.'),
+(2,'Сергей','Давыдов',''),
+(3,'Дмитрий','Соколов','Профессиональный программист.');
+![image](https://github.com/user-attachments/assets/681c1947-8d13-4428-bce6-b41368d6ff78)
