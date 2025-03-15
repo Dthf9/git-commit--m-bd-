@@ -81,7 +81,6 @@ values
 (1,'user1@domain.com', '2014-12-12','2016-04-08 12:34:54'),
 (2,'user2@domain.com', '2014-12-12','2017-02-13 11:46:53'),
 (3,'user3@domain.com', '2014-12-13','2017-04-04 05:12:07');
-![image](https://github.com/user-attachments/assets/cce5adf0-7801-4463-ad7e-cf28195dcaa3)
 ![image](https://github.com/user-attachments/assets/56db7a5a-e70b-4f5a-a8ba-50a85635ecb7)
 11)Создайте таблицу users , в которой будут следующие поля:
 
