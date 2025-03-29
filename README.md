@@ -100,3 +100,24 @@ VALUES
 (2,'Сергей','Давыдов',''),
 (3,'Дмитрий','Соколов','Профессиональный программист.');
 ![image](https://github.com/user-attachments/assets/681c1947-8d13-4428-bce6-b41368d6ff78)
+
+1) Выберите из таблицы orders 4 самых дорогих заказов за всё время.
+Данные нужно отсортировать в порядке убывания цены.
+Отмененные заказы не учитывайте.
+SELECT * FROM orders 
+WHERE STATUS != "cancelled" 
+ORDER BY sum DESC LIMIT 4;
+![image](https://github.com/user-attachments/assets/a4f9c000-084a-4ddf-9957-16a70242aae9)
+
+2) Выберите из таблицы products название и цены четырех самых дешевых товаров, которые есть на складе.
+SELECT NAME,price FROM products 
+WHERE COUNT != 0 
+ORDER BY price DESC LIMIT 4;
+![image](https://github.com/user-attachments/assets/9847deb1-a587-42de-8d44-ba9056247615)
+
+3) Выберите из таблицы orders три последних заказа (по дате date) стоимостью от 3200 рублей и выше.
+Данные отсортируйте по дате в обратном порядке.
+SELECT * FROM orders 
+WHERE sum >= 3200 
+ORDER BY date DESC LIMIT 3;
+![image](https://github.com/user-attachments/assets/63b2dc84-d7d6-4ca1-9507-ba54981f2840)
