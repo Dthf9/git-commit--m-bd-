@@ -121,3 +121,37 @@ SELECT * FROM orders
 WHERE sum >= 3200 
 ORDER BY date DESC LIMIT 3;
 ![image](https://github.com/user-attachments/assets/63b2dc84-d7d6-4ca1-9507-ba54981f2840)
+
+4) Создайте данную таблицу:
+DROP TABLE IF EXISTS products;
+CREATE TABLE products(
+	id INT UNSIGNED NOT NULL,
+	name VARCHAR(255) NULL,
+	count INTEGER NULL,
+   price INTEGER NULL
+	);
+INSERT INTO products (id, name, count, price)
+VALUES
+	 (1, 'Стиральная машина', 5, 10000),
+    (2, 'Холодильник', 0, 10000),
+    (3, 'Микроволновка', 3, 4000),
+    (4, 'Пылесос', 2, 4500),
+    (5, 'Вентилятор', 0, 700),
+    (6, 'Телевизор', 7, 31740),
+    (7, 'Тостер', 2, 2500),
+    (8, 'Принтер', 4, 3000),
+    (9, 'Активные колонки', 1, 2900),
+    (10, 'Ноутбук', 4, 36990),
+    (11, 'Посудомоечная машина', 0, 17800),
+    (12, 'Видеорегистратор', 23, 4000),
+    (13, 'Смартфон', 8, 12300),
+    (14, 'Флешка', 4, 1400),
+    (15, 'Блендер', 0, 5500),
+    (16, 'Газовая плита', 5, 11900),
+    (17, 'Клавиатура', 3, 1800);
+![image](https://github.com/user-attachments/assets/8d6750bf-1d77-47d5-8a53-2a69fc094902)
+5) Из этой таблицы сделать выборку на основе задания: Сайт выводит товары по 5 штук. Выберите из таблицы products товары, которые пользователи увидят на 3 странице каталога при сортировке в порядке возрастания цены (price).
+SELECT * FROM products
+ORDER BY price DESC LIMIT 5
+OFFSET 10;
+![image](https://github.com/user-attachments/assets/5d0bb1c6-ff7f-469d-a313-9d65016b7ccc)
