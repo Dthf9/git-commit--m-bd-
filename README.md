@@ -166,21 +166,21 @@ amount — стоимость заказа. Целое положительно�
 created — дата и время создания заказа. NULL запрещен.
 state — статус заказа. Выбор из new, cancelled, in_progress, delivered, completed. Можно выбрать только один вариант. NULL запрещен. По умолчанию должен стоять new.
 Добавьте 3 записи
-DROP TABLE IF EXISTS orders;
-CREATE TABLE orders (
-    id INT UNSIGNED NOT NULL PRIMARY KEY,
-    user_id int UNSIGNED not NULL,
-    amount int UNSIGNED not NULL DEFAULT 0 CHECK (amount <= 1000000),
-    created DATETIME not NULL,
-    status ENUM('new', 'cencelled', 'in_progress', 'delivered', 'completed') NOT NULL DEFAULT 'new'
+DROP table if EXISTS orders;
+create TABLE orders (
+	id INT UNSIGNED NOT NULL PRIMARY KEY,
+	user_id INT UNSIGNED NOT NULL,
+	amount int UNSIGNED NOT NULL DEFAULT 0 CHECK (amount <= 1000000),
+	created datetime NOT NULL,
+	STATUS ENUM ('new', 'canceled', 'in_progress', 'delivered', 'completed') NOT NULL DEFAULT 'new'
 );
-
- INSERT INTO orders (id, user_id, amount, created, status)
-VALUES
-    (1, 56, 5400, '2018-02-01 17:46:59', 'new'),
-    (2, 90, 249, '2018-02-01 19:13:04', 'new'),
-    (3, 78, 2200, '2018-02-01 22:43:09', 'new'); 
-![image](https://github.com/user-attachments/assets/767991ee-cd34-4694-a3ba-45ff0f73582f)
+![image](https://github.com/user-attachments/assets/3bfafc39-5061-437c-8173-c868458d0591)
+ INSERT INTO orders(id, user_id, amount, created, STATUS)
+VALUE 
+	(1, 56, 5600, '2018-02-01 17:46:59', DEFAULT),
+	(2, 90, 294, '2018-02-01 19:13:04', DEFAULT),
+	(3, 78, 2200, '2018-02-01 22:43:09', DEFAULT);
+![image](https://github.com/user-attachments/assets/e78e3fee-b4ba-4194-b771-b2e802fc948a)
 
 Задание 2.
 
