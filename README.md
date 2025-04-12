@@ -174,13 +174,14 @@ create TABLE orders (
 	created datetime NOT NULL,
 	STATUS ENUM ('new', 'canceled', 'in_progress', 'delivered', 'completed') NOT NULL DEFAULT 'new'
 );
-![image](https://github.com/user-attachments/assets/3bfafc39-5061-437c-8173-c868458d0591)
+![image](https://github.com/user-attachments/assets/e78e3fee-b4ba-4194-b771-b2e802fc948a)
  INSERT INTO orders(id, user_id, amount, created, STATUS)
 VALUE 
 	(1, 56, 5600, '2018-02-01 17:46:59', DEFAULT),
 	(2, 90, 294, '2018-02-01 19:13:04', DEFAULT),
 	(3, 78, 2200, '2018-02-01 22:43:09', DEFAULT);
-![image](https://github.com/user-attachments/assets/e78e3fee-b4ba-4194-b771-b2e802fc948a)
+![image](https://github.com/user-attachments/assets/3bfafc39-5061-437c-8173-c868458d0591)
+
 
 Задание 2.
 
