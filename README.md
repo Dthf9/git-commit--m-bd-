@@ -200,16 +200,19 @@ CREATE TABLE users (
     first_name VARCHAR(20) NOT NULL,
     last_name VARCHAR(20) NOT NULL,
     patronymic VARCHAR(20) NOT NULL DEFAULT '',
-     is_active TINYINT(1) NOT NULL DEFAULT TRUE,
-     is_superuser TINYINT(1) NOT NULL DEFAULT FALSE 
+     is_active BOLL  DEFAULT TRUE,
+     is_superuser BOLL  DEFAULT FALSE 
     
 );
+![image](https://github.com/user-attachments/assets/f73cb27c-b71b-49c4-97be-0bd703675d6c)
+
 
 INSERT INTO users (id, first_name, last_name, patronymic, is_active, is_superuser) VALUES
 (1,'Дмитрий', 'Иванов', DEFAULT, TRUE, FALSE),
 (2,'Анатолий', 'Белый', 'Сургеевич', TRUE, TRUE),
 (3,'Андрей', 'Крючков', DEFAULT, FALSE, FALSE);
-![image](https://github.com/user-attachments/assets/8ee231b5-92a7-41b8-a57e-126abaae59a8)
+![image](https://github.com/user-attachments/assets/70a0f33c-ad6d-4893-ab8b-a5bf887aaa85)
+
 
 Создайте таблицу products для хранения товаров в интернет магазине:
 
@@ -228,9 +231,11 @@ CREATE TABLE products (
     price DECIMAL(10,2) NOT NULL DEFAULT 0.00
     
 );
+![image](https://github.com/user-attachments/assets/31103680-d396-482f-b87d-a982f8917209)
 
 INSERT INTO products (id, category_id, name, count, price) VALUES
 (1, 1, 'Кружка', 5, 45.90),
 (2, 17, 'Фломастеры', 0, 78.00),
 (3, NULL, 'Сникерс', 12, 50.80);
-![image](https://github.com/user-attachments/assets/d9acc4d1-a943-48e9-abd5-a98432bbf64a)
+![image](https://github.com/user-attachments/assets/95638c8e-3c32-430c-b9a1-4e457ccc91ad)
+
