@@ -239,3 +239,28 @@ INSERT INTO products (id, category_id, name, count, price) VALUES
 (3, NULL, 'Сникерс', 12, 50.80);
 ![image](https://github.com/user-attachments/assets/95638c8e-3c32-430c-b9a1-4e457ccc91ad)
 
+Напишите тренировочный код для задания: Выберите из таблицы users всех пользователей с зарплатой от 40 000 рублей и выше. Данные нужно сначала отсортировать по убыванию зарплаты (salary), а затем в алфавитном порядке по имени (first_name). Не забудьте про удаление таблицы, если она существует (именно удаление). Код (ВЕСЬ) в одном файле.
+DROP TABLE if exists users;
+CREATE TABLE users(
+	id INT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	first_name VARCHAR(20) NOT NULL,
+	last_name VARCHAR(20) NOT NULL,
+	birthday DATE NOT NULL,
+	salary INTEGER NOT NULL,
+	job TEXT
+);
+insert INTO users (first_name, last_name, birthday, salary, job)
+VALUES
+	('Дмитрий', 'Петров', '2000-03-14', 25000, 'офис-менеджер'),
+	('Ольга', 'Антонова', '1999-12-01', 41000, 'дизайнер'),
+   ('Сергей', 'Васильев', '2002-02-20', 40000, 'младший программист'),    
+	('Константин', 'Степаниденко', '2004-03-07', 30000, 'водитель'),
+   ('Алена', 'Шикова', '1999-08-17', 53000, 'фотограф'),    
+	('Василина', 'Парамонова', '2000-10-10', 28000, 'секретарь'),
+   ('Александр', 'Пузаков', '2002-02-20', 120000, 'ведущий программист'),    
+	('Алина', 'Антонова', '2002-01-01', 40000, 'верстальщик');
+	
+SELECT * FROM users
+WHERE salary >= 40000 
+ORDER BY salary DESC, first_name;
+![image](https://github.com/user-attachments/assets/f20083dd-06e4-46cc-9752-542a6df9d1bc)
